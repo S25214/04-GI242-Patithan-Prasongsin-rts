@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class Test : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    private Unit[] units;
+    
+    public void SetIdle()
     {
-        
+        for (int i = 0; i < units.Length; i++)
+        {
+            units[i].State = UnitState.Idle;
+        }
     }
-
-    // Update is called once per frame
-    void Update()
+    public void SetMove()
     {
-        
+        for (int i = 0; i < units.Length; i++)
+        {
+            units[i].State = UnitState.Move;
+        }
+    }
+    public void SetAttack()
+    {
+        for (int i = 0; i < units.Length; i++)
+        {
+            units[i].State = UnitState.Attack;
+        }
     }
 }
