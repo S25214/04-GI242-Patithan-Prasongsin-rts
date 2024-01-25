@@ -56,16 +56,18 @@ public class CameraController : MonoBehaviour
     {
         xInput = Input.GetAxis("Horizontal");
         zInput = Input.GetAxis("Vertical");
-        Vector3 dir = (transform.forward * zInput) + (transform.right * xInput);
-        transform.position += dir * moveSpeed * Time.deltaTime;
+        var transform1 = transform;
+        Vector3 dir = (transform1.forward * zInput) + (transform1.right * xInput);
+        transform1.position += dir * (moveSpeed * Time.deltaTime);
         transform.position = Clamp(corner2.position, corner1.position);
     }
     private Vector3 Clamp(Vector3 lowerLeft, Vector3 topRight)
     {
-        Vector3 pos = new Vector3(Mathf.Clamp(transform.position.x,
+        var position = transform.position;
+        Vector3 pos = new Vector3(Mathf.Clamp(position.x,
                 lowerLeft.x, topRight.x),
-            transform.position.y,
-            Mathf.Clamp(transform.position.z,
+            position.y,
+            Mathf.Clamp(position.z,
                 lowerLeft.z, topRight.z));
         return pos;
     }
@@ -81,13 +83,14 @@ public class CameraController : MonoBehaviour
             return; //too close
         else if (dist > maxZoomDist && zoomModifier < 0f)
             return; //too far
-        cam.transform.position += cam.transform.forward * zoomModifier * zoomSpeed;
+        var transform1 = cam.transform;
+        transform1.position += transform1.forward * (zoomModifier * zoomSpeed);
     }
     void Rotate()
     {
-        if (Input.GetKey(KeyCode.Q))
-            newRotation *= Quaternion.Euler(Vector3.up * rotationAmount);
         if (Input.GetKey(KeyCode.E))
+            newRotation *= Quaternion.Euler(Vector3.up * rotationAmount);
+        if (Input.GetKey(KeyCode.Q))
             newRotation *= Quaternion.Euler(Vector3.up * -rotationAmount);
         transform.rotation = Quaternion.Lerp(transform.rotation,
             newRotation, Time.deltaTime * moveSpeed);
