@@ -2593,6 +2593,14 @@ PrefabInstance:
       propertyPath: faction
       value: 
       objectReference: {fileID: 455603719}
+    - target: {fileID: 6404532985164877961, guid: 03f48911280a462468398d2393de5e17, type: 3}
+      propertyPath: unitPrefabs.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6404532985164877961, guid: 03f48911280a462468398d2393de5e17, type: 3}
+      propertyPath: unitPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 102334, guid: e9206af152faefc438aa61d4d9bcff98, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3627,7 +3635,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1194365068
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5550,67 +5558,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2030634556}
   m_CullTransparentMesh: 1
---- !u!1001 &2048767286
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5080925480213809493, guid: d270432f7b21397488a7cbdd54aa3644, type: 3}
-      propertyPath: faction
-      value: 
-      objectReference: {fileID: 1831028458}
-    - target: {fileID: 7161722623022974800, guid: d270432f7b21397488a7cbdd54aa3644, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 30.38078
-      objectReference: {fileID: 0}
-    - target: {fileID: 7161722623022974800, guid: d270432f7b21397488a7cbdd54aa3644, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.0000038146973
-      objectReference: {fileID: 0}
-    - target: {fileID: 7161722623022974800, guid: d270432f7b21397488a7cbdd54aa3644, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 7.067522
-      objectReference: {fileID: 0}
-    - target: {fileID: 7161722623022974800, guid: d270432f7b21397488a7cbdd54aa3644, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7161722623022974800, guid: d270432f7b21397488a7cbdd54aa3644, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7161722623022974800, guid: d270432f7b21397488a7cbdd54aa3644, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7161722623022974800, guid: d270432f7b21397488a7cbdd54aa3644, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7161722623022974800, guid: d270432f7b21397488a7cbdd54aa3644, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7161722623022974800, guid: d270432f7b21397488a7cbdd54aa3644, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7161722623022974800, guid: d270432f7b21397488a7cbdd54aa3644, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9113283288788589610, guid: d270432f7b21397488a7cbdd54aa3644, type: 3}
-      propertyPath: m_Name
-      value: PirateShip
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d270432f7b21397488a7cbdd54aa3644, type: 3}
 --- !u!1 &2080674857
 GameObject:
   m_ObjectHideFlags: 0
@@ -5859,4 +5806,3 @@ SceneRoots:
   - {fileID: 1359386675}
   - {fileID: 2080674859}
   - {fileID: 762976232}
-  - {fileID: 2048767286}

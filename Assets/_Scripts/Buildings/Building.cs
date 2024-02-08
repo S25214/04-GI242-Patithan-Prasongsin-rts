@@ -27,6 +27,8 @@ public class Building : Structure
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.H))
+            ToCreateUnit(1);
         if (Input.GetKeyDown(KeyCode.G))
             ToCreateUnit(0);
 
@@ -89,11 +91,21 @@ public class Building : Structure
             return;
 
         GameObject unitObj = Instantiate(unitPrefabs[id], spawnPoint.position, Quaternion.Euler(0f, 180f, 0f));
-
+        
         recruitList.RemoveAt(0);
 
         Unit unit = unitObj.GetComponent<Unit>();
-        unit.MoveToPosition(rallyPoint.position); //Go to Rally Point
+
+        switch (id)
+        {
+            case 0:
+                unit.MoveToPosition(rallyPoint.position); //Go to Rally Point
+                break;
+            case 1:
+                unit.MoveToPosition(rallyPoint.position + new Vector3(10f,0,0)); //skooch a bit
+                break;
+        }
+        
 
         //Add unit into faction's Army
         faction.AliveUnits.Add(unit);
