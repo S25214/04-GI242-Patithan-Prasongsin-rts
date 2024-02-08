@@ -280,7 +280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   unitName: 
-  unitPic: {fileID: 0}
+  unitPic: {fileID: 21300000, guid: 4976172214f84a14fb932b09dd2bca6d, type: 3}
   curHP: 0
   maxHP: 100
   moveSpeed: 5
@@ -292,6 +292,12 @@ MonoBehaviour:
   state: 0
   faction: {fileID: 0}
   selectionVisual: {fileID: 8108421379214777757}
+  unitCost:
+    food: 30
+    wood: 5
+    gold: 80
+    stone: 0
+  unitWaitTime: 0.1
 --- !u!114 &-5640485185135709755
 MonoBehaviour:
   m_ObjectHideFlags: 0
