@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class UnitSelect : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class UnitSelect : MonoBehaviour
 
     public static UnitSelect instance;
     
+    [SerializeField]
+    private Building curBuilding; //current selected single building
+    public Building CurBuilding { get { return curBuilding; } }
     
     void Awake()
     {
@@ -35,6 +39,8 @@ public class UnitSelect : MonoBehaviour
         //mouse down
         if (Input.GetMouseButtonDown(0))
         {
+            if (EventSystem.current.IsPointerOverGameObject())
+                return;
             ClearEverything();
         }
 
@@ -71,6 +77,9 @@ public class UnitSelect : MonoBehaviour
                 case "Unit":
                     SelectUnit(hit);
                     break;
+                case "Building":
+                    BuildingSelect(hit);
+                    break;
             }
         }
     }
@@ -79,19 +88,41 @@ public class UnitSelect : MonoBehaviour
     {
         if (curUnit != null)
             curUnit.ToggleSelectionVisual(false);
+        if (curBuilding != null)
+            curBuilding.ToggleSelectionVisual(false);
     }
 
     private void ClearEverything()
     {
         ClearAllSelectionVisual();
         curUnit = null;
+        curBuilding = null;
         
         InfoManager.instance.ClearAllInfo();
+        ActionManager.instance.ClearAllInfo();
     }
     private void ShowUnit(Unit u)
     {
         InfoManager.instance.ShowAllInfo(u);
     }
+    private void ShowBuilding(Building b)
+    {
+        InfoManager.instance.ShowAllInfo(b);
+        ActionManager.instance.ShowCreateUnitMode(b);
+    }
+    
+    private void BuildingSelect(RaycastHit hit)
+    {
+        curBuilding = hit.collider.GetComponent<Building>();
+        curBuilding.ToggleSelectionVisual(true);
+
+        if (GameManager.instance.MyFaction.IsMyBuilding(curBuilding))
+        {
+            //Debug.Log("my building");
+            ShowBuilding(curBuilding);//Show building info
+        }
+    }
+
 
 
 
