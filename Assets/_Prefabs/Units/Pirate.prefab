@@ -278,8 +278,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b54ab79b3b0763478ed277acb0b0c97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 1
-  unitName: 
+  id: 2
+  unitName: Pirate
   unitPic: {fileID: 21300000, guid: 4976172214f84a14fb932b09dd2bca6d, type: 3}
   curHP: 0
   maxHP: 100
@@ -298,6 +298,8 @@ MonoBehaviour:
     gold: 80
     stone: 0
   unitWaitTime: 0.01
+  isBuilder: 0
+  builder: {fileID: 0}
 --- !u!114 &-5640485185135709755
 MonoBehaviour:
   m_ObjectHideFlags: 0

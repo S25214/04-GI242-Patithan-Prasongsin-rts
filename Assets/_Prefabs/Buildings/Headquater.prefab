@@ -49,8 +49,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48b875eb9343d56459379e28d188b669, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  structureName: 
-  structurePic: {fileID: 0}
+  structureName: Headquater
+  structurePic: {fileID: 21300000, guid: 7617b12f47adcc945aa146ee90022baf, type: 3}
   curHP: 0
   maxHP: 0
   faction: {fileID: 0}
@@ -59,10 +59,12 @@ MonoBehaviour:
   rallyPoint: {fileID: 6917882445245943161}
   unitPrefabs:
   - {fileID: 186328, guid: 49333fee23482af45b087f40cc412478, type: 3}
+  - {fileID: 186328, guid: a49c60a3078740646b3bb8601bc4aac4, type: 3}
   recruitList: []
   unitTimer: 0
   curUnitProgress: 0
   curUnitWaitTime: 0
+  isFunctional: 0
 --- !u!65 &600787174849226582
 BoxCollider:
   m_ObjectHideFlags: 0

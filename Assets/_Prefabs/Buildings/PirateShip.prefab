@@ -136,6 +136,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7161722623022974800}
   - component: {fileID: 5080925480213809493}
+  - component: {fileID: 1550808118865281817}
   m_Layer: 7
   m_Name: PirateShip
   m_TagString: Building
@@ -188,6 +189,28 @@ MonoBehaviour:
   unitTimer: 0
   curUnitProgress: 0
   curUnitWaitTime: 0
+  isFunctional: 0
+--- !u!65 &1550808118865281817
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9113283288788589610}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 41.75294, y: 10.790458, z: 11.420858}
+  m_Center: {x: -3.982809, y: 5.567576, z: 1.9519854}
 --- !u!1001 &11203394663723481
 PrefabInstance:
   m_ObjectHideFlags: 0

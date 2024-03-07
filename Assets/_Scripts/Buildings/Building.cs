@@ -110,6 +110,9 @@ public class Building : Structure
             case 1:
                 unit.MoveToPosition(rallyPoint.position + new Vector3(10f,0,0)); //skooch a bit
                 break;
+            default:
+                unit.MoveToPosition(rallyPoint.position); //Go to Rally Point
+                break;
         }
         
 

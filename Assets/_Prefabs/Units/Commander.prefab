@@ -2300,7 +2300,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &457922
 Transform:
   m_ObjectHideFlags: 0
@@ -2944,7 +2944,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &467204
 Transform:
   m_ObjectHideFlags: 0
@@ -2980,7 +2980,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f81a978cf85038f41a62cf0aad8c2981, type: 2}
+  - {fileID: 2100000, guid: ce19f20337e1d6545bddd9bc3ba7de65, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5143,7 +5143,7 @@ GameObject:
   - component: {fileID: 8181290548009530571}
   - component: {fileID: -7480687692393149983}
   m_Layer: 6
-  m_Name: Soldier
+  m_Name: Commander
   m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5259,9 +5259,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b54ab79b3b0763478ed277acb0b0c97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
-  unitName: Soldier
-  unitPic: {fileID: 21300000, guid: 59a75da307b71d54eaa14ec99c025df6, type: 3}
+  id: 1
+  unitName: Commander
+  unitPic: {fileID: 21300000, guid: 418669a8a343d1447a7b762d2835a4c8, type: 3}
   curHP: 0
   maxHP: 100
   moveSpeed: 5
@@ -5274,9 +5274,9 @@ MonoBehaviour:
   faction: {fileID: 0}
   selectionVisual: {fileID: 4445362737878396021}
   unitCost:
-    food: 50
-    wood: 10
-    gold: 20
+    food: 100
+    wood: 20
+    gold: 40
     stone: 0
   unitWaitTime: 0.01
   isBuilder: 0
