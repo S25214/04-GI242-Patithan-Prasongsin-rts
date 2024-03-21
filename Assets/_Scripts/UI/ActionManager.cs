@@ -16,17 +16,6 @@ public class ActionManager : MonoBehaviour
         instance = this;
         cg = GetComponent<CanvasGroup>();
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     
     private void HideCreateUnitButtons()
     {
@@ -102,6 +91,11 @@ public class ActionManager : MonoBehaviour
     public void CreateBuildingButton(int n)//Map with Create Building Btns
     {
         //Debug.Log("1 - Click Button: " + n);
+        Unit unit = UnitSelect.instance.CurUnit;
+        if (unit.IsBuilder)
+        {
+            unit.Builder.ToCreateNewBuilding(n);
+        }
     }
     
 

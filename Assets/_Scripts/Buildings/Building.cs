@@ -20,23 +20,30 @@ public class Building : Structure
     [SerializeField] private float curUnitWaitTime = 0f;
 
     [SerializeField] private bool isFunctional;
-
-    public bool IsFunctional { get { return isFunctional;} set { isFunctional = value; }
-}
+    public bool IsFunctional { get { return isFunctional;} set { isFunctional = value; } }
+    
+    [SerializeField] private bool isHQ;
+    public bool IsHQ { get { return isHQ;} }
+    [SerializeField] private float intoTheGround = 5f;
+    public float IntoTheGround { get { return intoTheGround;} }
+    
+    private float timer = 0f; //Constructing timer
+    public float Timer { get { return timer; } set { timer = value; } }
+    private float waitTime = 0.5f; //How fast it will be construct, higher is longer
+    public float WaitTime { get { return waitTime; } set { waitTime = value; } }
 
     // Start is called before the first frame update
     void Start()
     {
-        curHP = maxHP;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.H))
+        /*if (Input.GetKeyDown(KeyCode.H))
             ToCreateUnit(1);
         if (Input.GetKeyDown(KeyCode.G))
-            ToCreateUnit(0);
+            ToCreateUnit(0);*/
 
         if ((recruitList.Count > 0) && (recruitList[0] != null))
         {
@@ -98,22 +105,11 @@ public class Building : Structure
 
         GameObject unitObj = Instantiate(unitPrefabs[id], spawnPoint.position, Quaternion.Euler(0f, 180f, 0f));
         
-        recruitList.RemoveAt(0);
+        
 
         Unit unit = unitObj.GetComponent<Unit>();
-
-        switch (id)
-        {
-            case 0:
-                unit.MoveToPosition(rallyPoint.position); //Go to Rally Point
-                break;
-            case 1:
-                unit.MoveToPosition(rallyPoint.position + new Vector3(10f,0,0)); //skooch a bit
-                break;
-            default:
-                unit.MoveToPosition(rallyPoint.position); //Go to Rally Point
-                break;
-        }
+        unit.Faction = faction;
+        unit.MoveToPosition(rallyPoint.position + new Vector3(id*2f-5,0,0)); //skooch a bit
         
 
         //Add unit into faction's Army
@@ -123,6 +119,8 @@ public class Building : Structure
         //If it's me, update UI
         if (faction == GameManager.instance.MyFaction)
             MainUI.instance.UpdateAllResource(faction);
+
+        recruitList.Remove(recruitList[0]);
     }
     
     public void ToggleSelectionVisual(bool flag)

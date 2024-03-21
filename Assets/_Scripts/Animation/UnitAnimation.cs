@@ -46,6 +46,10 @@ public class UnitAnimation : MonoBehaviour
                 anim.SetBool("IsAttack", true);
                 ShowEquip(true);
                 break;
+            case UnitState.BuildProgress:
+                anim.SetBool("IsAttack", true);
+                ShowEquip(true);
+                break;
         }
     }
 

@@ -604,7 +604,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 24864374}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1344547746}
+        m_TargetAssemblyTypeName: ActionManager, Assembly-CSharp
+        m_MethodName: CreateBuildingButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &24864374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2362,7 +2374,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 450572080}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1344547746}
+        m_TargetAssemblyTypeName: ActionManager, Assembly-CSharp
+        m_MethodName: CreateBuildingButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &450572080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3109,17 +3133,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 663518489}
   m_CullTransparentMesh: 1
---- !u!114 &678179572 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6404532985164877961, guid: 03f48911280a462468398d2393de5e17, type: 3}
-  m_PrefabInstance: {fileID: 717363397}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48b875eb9343d56459379e28d188b669, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &697218768
 GameObject:
   m_ObjectHideFlags: 0
@@ -3318,83 +3331,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1001 &717363397
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 585643013273070287, guid: 03f48911280a462468398d2393de5e17, type: 3}
-      propertyPath: m_Name
-      value: Headquater (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3136249118219136579, guid: 03f48911280a462468398d2393de5e17, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 17.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3136249118219136579, guid: 03f48911280a462468398d2393de5e17, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3136249118219136579, guid: 03f48911280a462468398d2393de5e17, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 13.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3136249118219136579, guid: 03f48911280a462468398d2393de5e17, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3136249118219136579, guid: 03f48911280a462468398d2393de5e17, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3136249118219136579, guid: 03f48911280a462468398d2393de5e17, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3136249118219136579, guid: 03f48911280a462468398d2393de5e17, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3136249118219136579, guid: 03f48911280a462468398d2393de5e17, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3136249118219136579, guid: 03f48911280a462468398d2393de5e17, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3136249118219136579, guid: 03f48911280a462468398d2393de5e17, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6404532985164877961, guid: 03f48911280a462468398d2393de5e17, type: 3}
-      propertyPath: curHP
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 6404532985164877961, guid: 03f48911280a462468398d2393de5e17, type: 3}
-      propertyPath: maxHP
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 6404532985164877961, guid: 03f48911280a462468398d2393de5e17, type: 3}
-      propertyPath: faction
-      value: 
-      objectReference: {fileID: 455603719}
-    - target: {fileID: 6404532985164877961, guid: 03f48911280a462468398d2393de5e17, type: 3}
-      propertyPath: isFunctional
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6404532985164877961, guid: 03f48911280a462468398d2393de5e17, type: 3}
-      propertyPath: structureName
-      value: HQ 2
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 03f48911280a462468398d2393de5e17, type: 3}
 --- !u!1 &726939725
 GameObject:
   m_ObjectHideFlags: 0
@@ -3598,6 +3534,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6404532985164877961, guid: 03f48911280a462468398d2393de5e17, type: 3}
+      propertyPath: isHQ
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6404532985164877961, guid: 03f48911280a462468398d2393de5e17, type: 3}
       propertyPath: curHP
       value: 100
       objectReference: {fileID: 0}
@@ -3617,14 +3557,6 @@ PrefabInstance:
       propertyPath: structureName
       value: HQ 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6404532985164877961, guid: 03f48911280a462468398d2393de5e17, type: 3}
-      propertyPath: unitPrefabs.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6404532985164877961, guid: 03f48911280a462468398d2393de5e17, type: 3}
-      propertyPath: unitPrefabs.Array.data[1]
-      value: 
-      objectReference: {fileID: 102334, guid: e9206af152faefc438aa61d4d9bcff98, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3908,7 +3840,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 884476536}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1344547746}
+        m_TargetAssemblyTypeName: ActionManager, Assembly-CSharp
+        m_MethodName: CreateBuildingButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &884476536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4028,7 +3972,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 887099956}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1344547746}
+        m_TargetAssemblyTypeName: ActionManager, Assembly-CSharp
+        m_MethodName: CreateBuildingButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &887099956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4806,7 +4762,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 987155803}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1344547746}
+        m_TargetAssemblyTypeName: ActionManager, Assembly-CSharp
+        m_MethodName: CreateBuildingButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &987155803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5858,7 +5826,7 @@ PrefabInstance:
     - target: {fileID: 7653538707311730313, guid: 28788d6f72634da4ab4c27e6f253ba42, type: 3}
       propertyPath: aliveBuildings.Array.data[1]
       value: 
-      objectReference: {fileID: 678179572}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6096,7 +6064,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1381307928}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1344547746}
+        m_TargetAssemblyTypeName: ActionManager, Assembly-CSharp
+        m_MethodName: CreateBuildingButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1381307928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6423,7 +6403,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1501231190}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1344547746}
+        m_TargetAssemblyTypeName: ActionManager, Assembly-CSharp
+        m_MethodName: CreateBuildingButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1501231190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6781,7 +6773,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1615095776}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1344547746}
+        m_TargetAssemblyTypeName: ActionManager, Assembly-CSharp
+        m_MethodName: CreateBuildingButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1615095776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7598,7 +7602,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1834338034}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1344547746}
+        m_TargetAssemblyTypeName: ActionManager, Assembly-CSharp
+        m_MethodName: CreateBuildingButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 9
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1834338034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8000,7 +8016,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1996612042}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1344547746}
+        m_TargetAssemblyTypeName: ActionManager, Assembly-CSharp
+        m_MethodName: CreateBuildingButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1996612042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8627,4 +8655,3 @@ SceneRoots:
   - {fileID: 1359386675}
   - {fileID: 2080674859}
   - {fileID: 762976232}
-  - {fileID: 717363397}
