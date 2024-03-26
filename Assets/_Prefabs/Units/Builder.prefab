@@ -5143,6 +5143,7 @@ GameObject:
   - component: {fileID: 8181290548009530571}
   - component: {fileID: -7480687692393149983}
   - component: {fileID: 2500506523327085655}
+  - component: {fileID: 1229882333371815395}
   m_Layer: 6
   m_Name: Builder
   m_TagString: Unit
@@ -5282,6 +5283,10 @@ MonoBehaviour:
   unitWaitTime: 0.01
   isBuilder: 1
   builder: {fileID: 0}
+  isWorker: 1
+  worker: {fileID: 0}
+  pathUpdateRate: 1
+  lastPathUpdateTime: 0
 --- !u!114 &-7480687692393149983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5316,6 +5321,24 @@ MonoBehaviour:
   newBuilding: {fileID: 0}
   ghostBuilding: {fileID: 0}
   inProgressBuilding: {fileID: 0}
+--- !u!114 &1229882333371815395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1c58754b85b3a545a62db838f88d7b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curResourceSource: {fileID: 0}
+  gatherRate: 0.5
+  gatherAmount: 1
+  amountCarry: 0
+  maxCarry: 25
+  carryType: 0
 --- !u!1 &186630
 GameObject:
   m_ObjectHideFlags: 0
@@ -6322,23 +6345,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 425854, guid: d5073af628fcad643916d0b42aefc3ca, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.43533835
+      value: 0.08617471
       objectReference: {fileID: 0}
     - target: {fileID: 425854, guid: d5073af628fcad643916d0b42aefc3ca, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.5572078
+      value: 0.08617471
       objectReference: {fileID: 0}
     - target: {fileID: 425854, guid: d5073af628fcad643916d0b42aefc3ca, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.5572078
+      value: -0.7018361
       objectReference: {fileID: 0}
     - target: {fileID: 425854, guid: d5073af628fcad643916d0b42aefc3ca, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.43533835
+      value: 0.7018361
       objectReference: {fileID: 0}
     - target: {fileID: 425854, guid: d5073af628fcad643916d0b42aefc3ca, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 180
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 425854, guid: d5073af628fcad643916d0b42aefc3ca, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y

@@ -10,6 +10,10 @@ public enum UnitState
     Attack,
     MoveToBuild,
     BuildProgress,
+    MoveToResource,
+    Gather,
+    DeliverToHQ,
+    StoreAtHQ,
     Die
 }
 
@@ -67,16 +71,30 @@ public class Unit : MonoBehaviour
     [SerializeField] private Builder builder;
     public Builder Builder { get { return builder; } }
 
+    [SerializeField] private bool isWorker;
+    public bool IsWorker { get { return isWorker; } set { isWorker = value; } }
+
+    [SerializeField] private Worker worker;
+    public Worker Worker { get { return worker; } }
     
+    [SerializeField]
+    private float pathUpdateRate = 1.0f;
+    public float PathUpdateRate { get { return pathUpdateRate; } }
+
+    [SerializeField]
+    private float lastPathUpdateTime;
+    public float LastPathUpdateTime { get { return lastPathUpdateTime; } set { lastPathUpdateTime = value; } }
+
+
     
     
     void Awake()
     {
         navAgent = GetComponent<NavMeshAgent>();
-        if (isBuilder)
-        {
+        if (IsBuilder) 
             builder = GetComponent<Builder>();
-        }
+        if (IsWorker) 
+            worker = GetComponent<Worker>();
     }
 
     // Start is called before the first frame update
@@ -140,5 +158,6 @@ public class Unit : MonoBehaviour
         
         transform.rotation = Quaternion.Euler(0f, angle, 0f);
     }
+    
     
 }

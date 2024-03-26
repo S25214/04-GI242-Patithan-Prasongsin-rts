@@ -46,9 +46,25 @@ public class UnitAnimation : MonoBehaviour
                 anim.SetBool("IsAttack", true);
                 ShowEquip(true);
                 break;
+            case UnitState.MoveToResource:
+                anim.SetBool("IsMove", true);
+                ShowEquip(false);
+                break;
             case UnitState.BuildProgress:
                 anim.SetBool("IsAttack", true);
                 ShowEquip(true);
+                break;
+            case UnitState.Gather:
+                anim.SetBool("IsAttack", true);
+                ShowEquip(true);
+                break;
+            case UnitState.DeliverToHQ:
+                anim.SetBool("IsMove", true);
+                ShowEquip(false);
+                break;
+            case UnitState.StoreAtHQ:
+                anim.SetBool("IsIdle", true);
+                ShowEquip(false);
                 break;
         }
     }
