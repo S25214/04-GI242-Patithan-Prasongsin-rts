@@ -103,10 +103,11 @@ public class Building : Structure
         if (unitPrefabs[id] == null)
             return;
 
-        GameObject unitObj = Instantiate(unitPrefabs[id], spawnPoint.position, Quaternion.Euler(0f, 180f, 0f));
+        GameObject unitObj = Instantiate(unitPrefabs[id], spawnPoint.position, Quaternion.Euler(0f, 180f, 0f), faction.UnitsParent);
         
         
-
+        recruitList.RemoveAt(0);
+        
         Unit unit = unitObj.GetComponent<Unit>();
         unit.Faction = faction;
         unit.MoveToPosition(rallyPoint.position + new Vector3(id*2f-5,0,0)); //skooch a bit
@@ -120,7 +121,7 @@ public class Building : Structure
         if (faction == GameManager.instance.MyFaction)
             MainUI.instance.UpdateAllResource(faction);
 
-        recruitList.Remove(recruitList[0]);
+        
     }
     
     public void ToggleSelectionVisual(bool flag)

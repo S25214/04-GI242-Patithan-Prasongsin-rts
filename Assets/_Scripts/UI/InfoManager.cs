@@ -10,6 +10,8 @@ public class InfoManager : MonoBehaviour
     
     [SerializeField] private Image unitPic, hpIcon, rsrcIcon, moveIcon, atkIcon, amrIcon, vslRngIcon, wpRngIcon;
     [SerializeField] private TextMeshProUGUI nameTxt, hpTxt, rsrcTxt, moveTxt, atkTxt, amrTxt, vslRngTxt, wpRngTxt;
+    
+    
     private void Awake()
     {
         instance = this;
@@ -99,6 +101,13 @@ public class InfoManager : MonoBehaviour
         wpRngTxt.text = "";
     }
 
+    public void ShowEnemyAllInfo(Unit unit)
+    {
+        SetPic(unit.UnitPic);
+        nameTxt.text = unit.UnitName;
 
+        hpIcon.color = Color.white;
+        hpTxt.text = $"{unit.CurHP}/{unit.MaxHP}";
+    }
 
 }

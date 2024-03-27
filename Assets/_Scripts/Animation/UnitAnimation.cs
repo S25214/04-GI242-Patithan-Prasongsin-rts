@@ -42,7 +42,11 @@ public class UnitAnimation : MonoBehaviour
                 anim.SetBool("IsMove", true);
                 ShowEquip(false);
                 break;
-            case UnitState.Attack:
+            case UnitState.MoveToEnemy:
+                anim.SetBool("IsMove", true);
+                ShowEquip(false);
+                break;
+            case UnitState.AttackUnit:
                 anim.SetBool("IsAttack", true);
                 ShowEquip(true);
                 break;
@@ -65,6 +69,10 @@ public class UnitAnimation : MonoBehaviour
             case UnitState.StoreAtHQ:
                 anim.SetBool("IsIdle", true);
                 ShowEquip(false);
+                break;
+            case UnitState.Die:
+                anim.SetBool("IsDead", true);
+                ShowEquip(true);
                 break;
         }
     }

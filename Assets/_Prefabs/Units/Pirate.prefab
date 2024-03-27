@@ -161,6 +161,7 @@ GameObject:
   - component: {fileID: 1547688346482608367}
   - component: {fileID: 4402918967081465789}
   - component: {fileID: -5640485185135709755}
+  - component: {fileID: 8665848368237326080}
   m_Layer: 6
   m_Name: Pirate
   m_TagString: Unit
@@ -258,7 +259,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -281,14 +282,14 @@ MonoBehaviour:
   id: 2
   unitName: Pirate
   unitPic: {fileID: 21300000, guid: 4976172214f84a14fb932b09dd2bca6d, type: 3}
-  curHP: 0
+  curHP: 100
   maxHP: 100
   moveSpeed: 5
-  minWpnDamage: 0
-  maxWpnDamage: 0
-  armour: 0
-  visualRange: 0
-  weaponRange: 0
+  minWpnDamage: 5
+  maxWpnDamage: 12
+  armour: 1
+  visualRange: 20
+  weaponRange: 15
   state: 0
   faction: {fileID: 0}
   selectionVisual: {fileID: 8108421379214777757}
@@ -304,6 +305,10 @@ MonoBehaviour:
   worker: {fileID: 0}
   pathUpdateRate: 1
   lastPathUpdateTime: 0
+  curEnemyUnitTarget: {fileID: 0}
+  attackRate: 1
+  lastAttackTime: 0
+  defendRange: 30
 --- !u!114 &-5640485185135709755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -317,6 +322,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   equip: {fileID: 3281564088979098808}
+--- !u!114 &8665848368237326080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 287cf387ca68c3e429f8f8e8d906edf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &102744
 GameObject:
   m_ObjectHideFlags: 0

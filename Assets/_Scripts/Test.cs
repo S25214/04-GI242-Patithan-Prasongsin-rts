@@ -25,7 +25,7 @@ public class Test : MonoBehaviour
     {
         for (int i = 0; i < units.Length; i++)
         {
-            units[i].State = UnitState.Attack;
+            units[i].State = UnitState.AttackUnit;
         }
     }
 }
