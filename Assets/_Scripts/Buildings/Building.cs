@@ -32,6 +32,11 @@ public class Building : Structure
     private float waitTime = 0.5f; //How fast it will be construct, higher is longer
     public float WaitTime { get { return waitTime; } set { waitTime = value; } }
 
+    [SerializeField] private bool isHousing;
+    public bool IsHousing { get { return isHousing;} }
+    [SerializeField] private bool isBarrack;
+    public bool IsBarrack { get { return isBarrack;} }
+
     // Start is called before the first frame update
     void Start()
     {

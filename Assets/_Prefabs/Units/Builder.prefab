@@ -5262,7 +5262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b54ab79b3b0763478ed277acb0b0c97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 2
+  id: 0
   unitName: Builder
   unitPic: {fileID: 21300000, guid: 9287f94648d6e2644837068412e9d31c, type: 3}
   curHP: 100
@@ -5323,9 +5323,11 @@ MonoBehaviour:
   buildingList:
   - {fileID: 585643013273070287, guid: 03f48911280a462468398d2393de5e17, type: 3}
   - {fileID: 3142714269993045081, guid: 797a983d176e1aa40a2db962289ac18a, type: 3}
+  - {fileID: 6226575966078245216, guid: 09fe68e9dc1985f4789e5e51d3c51bff, type: 3}
   ghostBuildingList:
   - {fileID: 585643013273070287, guid: 599fe73f68122ec41b0a9084ffeea88a, type: 3}
   - {fileID: 3142714269993045081, guid: f1ee639a48659874d8c0df05335daafb, type: 3}
+  - {fileID: 6226575966078245216, guid: f5c36e40234ae35408841689f19a2741, type: 3}
   newBuilding: {fileID: 0}
   ghostBuilding: {fileID: 0}
   inProgressBuilding: {fileID: 0}

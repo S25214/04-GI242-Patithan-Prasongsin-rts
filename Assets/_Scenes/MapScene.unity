@@ -4212,6 +4212,10 @@ PrefabInstance:
       propertyPath: structureName
       value: HQ 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6404532985164877961, guid: 03f48911280a462468398d2393de5e17, type: 3}
+      propertyPath: unitPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 186328, guid: fb0503333ff6abb498f8f0668e24cafa, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10331,6 +10335,8 @@ MonoBehaviour:
   ghostBuildingParent: {fileID: 6990196377544321071}
   startPosition: {fileID: 590176597454827753}
   newResourceRange: 50
+  buildingPrefabs: []
+  unitPrefabs: []
 --- !u!114 &7653538706435887653
 MonoBehaviour:
   m_ObjectHideFlags: 0
