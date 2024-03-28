@@ -74,6 +74,14 @@ public class UnitAnimation : MonoBehaviour
                 anim.SetBool("IsDead", true);
                 ShowEquip(true);
                 break;
+            case UnitState.MoveToEnemyBuilding:
+                anim.SetBool("IsMove", true);
+                ShowEquip(false);
+                break;
+            case UnitState.AttackBuilding:
+                anim.SetBool("IsAttack", true);
+                ShowEquip(true);
+                break;
         }
     }
 

@@ -66,6 +66,9 @@ public class UnitCommand : MonoBehaviour
                 case "Unit":
                     CommandToUnit(hit, unitSelect.CurUnits);
                     break;
+                case "Building":
+                    BuildingCommand(hit, unitSelect.CurUnits);
+                    break;
             }
         }
     }
@@ -118,5 +121,43 @@ public class UnitCommand : MonoBehaviour
     }
 
 
+    private void UnitAttackEnemyBuilding(Building enemyBuilding, List<Unit> units)
+    {
+        foreach (Unit u in units)
+        {
+            u.ToAttackBuilding(enemyBuilding);
+        }
+    }
+
+
+    private void BuildingCommand(RaycastHit hit, List<Unit> units)
+    {
+        Building building = hit.collider.gameObject.GetComponent<Building>();
+
+        if (building == null)
+            return;
+
+        // if it is an enemy's building
+        if (building.Faction == GameManager.instance.EnemyFaction)
+            UnitAttackEnemyBuilding(building, units);
+        // if is my building
+        else
+        {
+            if (building.CurHP < building.MaxHP)
+            {
+                HelpFixBuilding(hit.collider.gameObject,units);
+                StartCoroutine(Formula.BlinkSelection(building.SelectionVisual));
+            }
+        }
+    }
+
+    private void HelpFixBuilding(GameObject target, List<Unit> units)
+    {
+        foreach (Unit u in units)
+        {
+            if (u.IsBuilder)
+                u.Builder.BuilderStartFixBuilding(target);
+        }
+    }
 
 }

@@ -137,6 +137,8 @@ GameObject:
   - component: {fileID: 7161722623022974800}
   - component: {fileID: 5080925480213809493}
   - component: {fileID: 1550808118865281817}
+  - component: {fileID: 2500256259458523510}
+  - component: {fileID: 5282435119477032369}
   m_Layer: 7
   m_Name: PirateShip
   m_TagString: Building
@@ -175,12 +177,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48b875eb9343d56459379e28d188b669, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  structureName: 
+  structureName: Pirate HQ
   structurePic: {fileID: 0}
-  curHP: 0
-  maxHP: 0
+  curHP: 100
+  maxHP: 100
   faction: {fileID: 0}
   selectionVisual: {fileID: 1584357619328809590}
+  structureCost:
+    food: 0
+    wood: 0
+    gold: 0
+    stone: 0
   spawnPoint: {fileID: 420772334290904999}
   rallyPoint: {fileID: 4210765613445746390}
   unitPrefabs:
@@ -190,6 +197,8 @@ MonoBehaviour:
   curUnitProgress: 0
   curUnitWaitTime: 0
   isFunctional: 0
+  isHQ: 0
+  intoTheGround: 5
 --- !u!65 &1550808118865281817
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -205,12 +214,55 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 41.75294, y: 10.790458, z: 11.420858}
-  m_Center: {x: -3.982809, y: 5.567576, z: 1.9519854}
+  m_Size: {x: 48.6, y: 10.790458, z: 23.4}
+  m_Center: {x: -3.982809, y: 5.567576, z: 2.9}
+--- !u!208 &2500256259458523510
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9113283288788589610}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 21.03, y: 18.685, z: 8.335}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -2.3, y: 0, z: 2.56}
+  m_TimeToStationary: 0.5
+--- !u!54 &5282435119477032369
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9113283288788589610}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &11203394663723481
 PrefabInstance:
   m_ObjectHideFlags: 0
