@@ -33,7 +33,7 @@ public class UnitCommand : MonoBehaviour
     {
         foreach (Unit u in units)
         {
-            if (u != null)
+            if (u != null && u.CurHP != 0)
                 u.MoveToPosition(dest);
         }
         
