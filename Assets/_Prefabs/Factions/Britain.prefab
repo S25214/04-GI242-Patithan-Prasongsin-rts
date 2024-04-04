@@ -61,6 +61,21 @@ MonoBehaviour:
   buildingsParent: {fileID: 3937909006910347974}
   ghostBuildingParent: {fileID: 6990196376341881986}
   startPosition: {fileID: 590176598391520324}
+  newResourceRange: 50
+  buildingPrefabs:
+  - {fileID: 585643013273070287, guid: 03f48911280a462468398d2393de5e17, type: 3}
+  - {fileID: 6226575966078245216, guid: f630cfdd7fff6274fa0548ab293ccb16, type: 3}
+  - {fileID: 3142714269993045081, guid: 797a983d176e1aa40a2db962289ac18a, type: 3}
+  - {fileID: 6226575966078245216, guid: 09fe68e9dc1985f4789e5e51d3c51bff, type: 3}
+  ghostBuildingPrefabs:
+  - {fileID: 585643013273070287, guid: 599fe73f68122ec41b0a9084ffeea88a, type: 3}
+  - {fileID: 6226575966078245216, guid: 8387cbe78be7b884c95c2a12b7c6204a, type: 3}
+  - {fileID: 3142714269993045081, guid: f1ee639a48659874d8c0df05335daafb, type: 3}
+  - {fileID: 6226575966078245216, guid: f5c36e40234ae35408841689f19a2741, type: 3}
+  unitPrefabs:
+  - {fileID: 186328, guid: fb0503333ff6abb498f8f0668e24cafa, type: 3}
+  - {fileID: 186328, guid: a49c60a3078740646b3bb8601bc4aac4, type: 3}
+  - {fileID: 186328, guid: 49333fee23482af45b087f40cc412478, type: 3}
 --- !u!114 &2603113746904216374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76,8 +91,11 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 0
-  curUnit: {fileID: 0}
+  curUnits: []
   curBuilding: {fileID: 0}
+  curResource: {fileID: 0}
+  selectionBox: {fileID: 0}
+  curEnemy: {fileID: 0}
 --- !u!114 &5582964187197604588
 MonoBehaviour:
   m_ObjectHideFlags: 0

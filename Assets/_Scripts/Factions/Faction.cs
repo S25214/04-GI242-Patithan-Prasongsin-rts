@@ -47,10 +47,13 @@ public class Faction : MonoBehaviour
     public Transform StartPosition { get { return startPosition; } }
     
     [SerializeField]
-    private int newResourceRange = 50; //range for worker to find new resource
+    private int newResourceRange = 200; //range for worker to find new resource
     
     [SerializeField] private GameObject[] buildingPrefabs;
     public GameObject[] BuildingPrefabs { get { return buildingPrefabs; } }
+    
+    [SerializeField] private GameObject[] ghostBuildingPrefabs;
+    public GameObject[] GhostBuildingPrefabs { get { return ghostBuildingPrefabs; } }
 
     [SerializeField] private GameObject[] unitPrefabs;
     public GameObject[] UnitPrefabs { get { return unitPrefabs; } }
@@ -66,7 +69,7 @@ public class Faction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        UpdateHousingLimit();
     }
 
     // Update is called once per frame
@@ -136,6 +139,8 @@ public class Faction : MonoBehaviour
     {
         foreach (Building b in aliveBuildings)
         {
+            if (b == null)
+                continue;
             if (b.IsHQ)
                 return b.SpawnPoint.position;
         }
@@ -219,7 +224,31 @@ public class Faction : MonoBehaviour
         else if (unitLimit < 0)
             unitLimit = 0;
 
-        MainUI.instance.UpdateAllResource(this);
+        if (this == GameManager.instance.MyFaction)
+            MainUI.instance.UpdateAllResource(this);
+
+    }
+
+    public bool CheckUnitCost(int i)
+    {
+        Unit unit = unitPrefabs[i].GetComponent<Unit>();
+
+        if (unit == null)
+            return false;
+
+        if (food < unit.UnitCost.food)
+            return false;
+
+        if (wood < unit.UnitCost.wood)
+            return false;
+
+        if (gold < unit.UnitCost.gold)
+            return false;
+
+        if (stone < unit.UnitCost.stone)
+            return false;
+
+        return true;
     }
 
 
