@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4794762185683856491}
   - component: {fileID: 4784450061151945775}
   - component: {fileID: 9022291178095724144}
+  - component: {fileID: 7755999834442684533}
   m_Layer: 7
   m_Name: Br_TurretFort
   m_TagString: Building
@@ -146,6 +147,18 @@ CapsuleCollider:
   m_Height: 47.89
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7755999834442684533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3142714269993045081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35cedb8c361e0fd42bdb9c1f9468ea4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9091106996944256417
 GameObject:
   m_ObjectHideFlags: 0

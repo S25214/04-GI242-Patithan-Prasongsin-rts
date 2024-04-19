@@ -5145,6 +5145,7 @@ GameObject:
   - component: {fileID: 2500506523327085655}
   - component: {fileID: 1229882333371815395}
   - component: {fileID: -4484090168426846845}
+  - component: {fileID: 1957304629307302404}
   m_Layer: 6
   m_Name: PirateBuilder
   m_TagString: Unit
@@ -5361,6 +5362,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 287cf387ca68c3e429f8f8e8d906edf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1957304629307302404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35cedb8c361e0fd42bdb9c1f9468ea4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &186630

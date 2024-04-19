@@ -162,6 +162,7 @@ GameObject:
   - component: {fileID: 4402918967081465789}
   - component: {fileID: -5640485185135709755}
   - component: {fileID: 8665848368237326080}
+  - component: {fileID: -8797989911252718397}
   m_Layer: 6
   m_Name: PirateSoldier
   m_TagString: Unit
@@ -333,6 +334,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 287cf387ca68c3e429f8f8e8d906edf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-8797989911252718397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35cedb8c361e0fd42bdb9c1f9468ea4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &102744

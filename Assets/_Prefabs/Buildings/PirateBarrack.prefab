@@ -75,6 +75,7 @@ GameObject:
   - component: {fileID: 3146741579539380839}
   - component: {fileID: 1413358127164711372}
   - component: {fileID: 4841307219352575670}
+  - component: {fileID: -5131795748709751754}
   m_Layer: 7
   m_Name: PirateBarrack
   m_TagString: Building
@@ -202,6 +203,18 @@ MonoBehaviour:
   intoTheGround: 5
   isHousing: 0
   isBarrack: 1
+--- !u!114 &-5131795748709751754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6226575966078245216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35cedb8c361e0fd42bdb9c1f9468ea4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7706803285132366062
 GameObject:
   m_ObjectHideFlags: 0

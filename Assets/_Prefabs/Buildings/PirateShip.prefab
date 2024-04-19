@@ -138,6 +138,7 @@ GameObject:
   - component: {fileID: 1550808118865281817}
   - component: {fileID: 2500256259458523510}
   - component: {fileID: 5282435119477032369}
+  - component: {fileID: -4112375537436680391}
   m_Layer: 7
   m_Name: PirateShip
   m_TagString: Building
@@ -264,6 +265,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-4112375537436680391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9113283288788589610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35cedb8c361e0fd42bdb9c1f9468ea4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &11203394663723481
 PrefabInstance:
   m_ObjectHideFlags: 0
