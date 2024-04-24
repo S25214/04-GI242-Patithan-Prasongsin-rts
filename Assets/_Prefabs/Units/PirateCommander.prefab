@@ -140,6 +140,10 @@ PrefabInstance:
       propertyPath: unitName
       value: Pirate Commander
       objectReference: {fileID: 0}
+    - target: {fileID: 8181290548009530571, guid: 49333fee23482af45b087f40cc412478, type: 3}
+      propertyPath: visualRange
+      value: 60
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
